@@ -3,7 +3,7 @@ const webpack = require("webpack");
 const BundleAnalyzerPlugin =
   require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 
-module.exports = {
+const config = {
   entry: {
     app: "./assets/js/script.js",
     events: "./assets/js/event.js",
@@ -12,7 +12,7 @@ module.exports = {
   },
   output: {
     filename: "[name].bundle.js",
-    path: path.resolve(__dirname, "dist"),
+    path: path.join(__dirname + "/dist"),
   },
   module: {
     rules: [
@@ -49,3 +49,5 @@ module.exports = {
   ],
   mode: "development",
 };
+
+module.exports = config;
