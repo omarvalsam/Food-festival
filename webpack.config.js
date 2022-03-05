@@ -6,9 +6,9 @@ const BundleAnalyzerPlugin =
 const config = {
   entry: {
     app: "./assets/js/script.js",
-    events: "./assets/js/event.js",
+    events: "./assets/js/events.js",
     schedule: "./assets/js/schedule.js",
-    tickets: "./assets/js/ticket.js",
+    tickets: "./assets/js/tickets.js",
   },
   output: {
     filename: "[name].bundle.js",
@@ -43,9 +43,9 @@ const config = {
       $: "jquery",
       jquery: "jquery",
     }),
-    new BundleAnalyzerPlugin({
-      analyzerMode: "static", // the report outputs to an HTML file in the dist folder
-    }),
+    // new BundleAnalyzerPlugin({
+    //   analyzerMode: "static", // the report outputs to an HTML file in the dist folder
+    // }),
   ],
   mode: "development",
 };

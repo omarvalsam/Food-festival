@@ -19,13 +19,13 @@ eval("function createEl(htmlString, attrs, ...children) {\n  if (typeof htmlStri
 
 /***/ }),
 
-/***/ "./assets/js/event.js":
-/*!****************************!*\
-  !*** ./assets/js/event.js ***!
-  \****************************/
+/***/ "./assets/js/events.js":
+/*!*****************************!*\
+  !*** ./assets/js/events.js ***!
+  \*****************************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-eval("/* provided dependency */ var $ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\nconst createLoremIpsum = __webpack_require__(/*! ./helpers */ \"./assets/js/helpers.js\");\n\n__webpack_require__(/*! bootstrap */ \"./node_modules/bootstrap/dist/js/bootstrap.js\");\nconst createEl = __webpack_require__(/*! ./domMethods */ \"./assets/js/domMethods.js\");\n\n$(document).ready(function () {\n  if (window.location.href.indexOf(\"event\") > -1) {\n    const currentEvent = JSON.parse(localStorage.getItem(\"currentEvent\")) || {\n      title: \"Title Placeholder\",\n      subtitle: \"\",\n      description: \"\",\n    };\n\n    const pageEl = document.querySelector(\"#page\");\n\n    const containerEl = createEl(\n      \"div\",\n      { class: \"container\" },\n      createEl(\n        \"div\",\n        { class: \"card mb-3\" },\n        createEl(\"img\", {\n          class: \"card-img-top\",\n          style: \"width: 5px\",\n          src: currentEvent.image || \"https://via.placeholder.com/350x150\",\n        }),\n        createEl(\n          \"div\",\n          { class: \"card-body\" },\n          createEl(\"h1\", { class: \"card-title\" }, currentEvent.title || \"\"),\n          createEl(\"h2\", { class: \"text-muted\" }, currentEvent.subtitle || \"\"),\n          createEl(\n            \"p\",\n            { class: \"card-text mt-3\" },\n            currentEvent.description || createLoremIpsum(100)\n          ),\n          createEl(\n            \"a\",\n            { class: \"btn btn-primary\", href: \"tickets.html\" },\n            \"Buy Tickets\"\n          )\n        )\n      )\n    );\n    pageEl.appendChild(containerEl);\n  }\n});\n\n\n//# sourceURL=webpack://food-festival/./assets/js/event.js?");
+eval("/* provided dependency */ var $ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\nconst createLoremIpsum = __webpack_require__(/*! ./helpers */ \"./assets/js/helpers.js\");\n\n__webpack_require__(/*! bootstrap */ \"./node_modules/bootstrap/dist/js/bootstrap.js\");\nconst createEl = __webpack_require__(/*! ./domMethods */ \"./assets/js/domMethods.js\");\n\n$(document).ready(function () {\n  if (window.location.href.indexOf(\"event\") > -1) {\n    const currentEvent = JSON.parse(localStorage.getItem(\"currentEvent\")) || {\n      title: \"Title Placeholder\",\n      subtitle: \"\",\n      description: \"\",\n    };\n\n    const pageEl = document.querySelector(\"#page\");\n\n    const containerEl = createEl(\n      \"div\",\n      { class: \"container\" },\n      createEl(\n        \"div\",\n        { class: \"card mb-3\" },\n        createEl(\"img\", {\n          class: \"card-img-top\",\n          style: \"width: 5px\",\n          src: currentEvent.image || \"https://via.placeholder.com/350x150\",\n        }),\n        createEl(\n          \"div\",\n          { class: \"card-body\" },\n          createEl(\"h1\", { class: \"card-title\" }, currentEvent.title || \"\"),\n          createEl(\"h2\", { class: \"text-muted\" }, currentEvent.subtitle || \"\"),\n          createEl(\n            \"p\",\n            { class: \"card-text mt-3\" },\n            currentEvent.description || createLoremIpsum(100)\n          ),\n          createEl(\n            \"a\",\n            { class: \"btn btn-primary\", href: \"tickets.html\" },\n            \"Buy Tickets\"\n          )\n        )\n      )\n    );\n    pageEl.appendChild(containerEl);\n  }\n});\n\n\n//# sourceURL=webpack://food-festival/./assets/js/events.js?");
 
 /***/ }),
 
@@ -142,7 +142,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 	// startup
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("./assets/js/event.js");
+/******/ 	var __webpack_exports__ = __webpack_require__("./assets/js/events.js");
 /******/ 	
 /******/ })()
 ;
